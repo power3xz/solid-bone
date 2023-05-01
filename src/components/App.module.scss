@@ -1,4 +1,9 @@
 .app {
+  border: 1px solid #333333;
+  padding: 8px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 1px #999999;
+  height: calc(100vh - 16px);
   .title {
     color: red;
   }
