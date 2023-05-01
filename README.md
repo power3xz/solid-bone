@@ -1,0 +1,3 @@
+- solidjs
+- typescript
+- module css
