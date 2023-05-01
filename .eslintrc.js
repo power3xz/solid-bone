@@ -4,7 +4,6 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  files: ['src/**/*'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
