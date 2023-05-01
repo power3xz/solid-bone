@@ -1,2 +1,4 @@
-const a = 1;
-console.log(a);
+import { render } from 'solid-js/web';
+import App from './app';
+
+render(() => <App />, document.querySelector('#app') as HTMLElement);

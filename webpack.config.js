@@ -4,6 +4,7 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   entry: ['./src/index.tsx'],
+  devtool: 'source-map',
   output: {
     filename: '[id]-[contenthash].js',
     chunkFilename: '[id]-[contenthash].[ext]',
@@ -16,7 +17,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: ['ts-loader'],
+        use: ['babel-loader', 'ts-loader'],
       },
       {
         test: /\.css$/,
