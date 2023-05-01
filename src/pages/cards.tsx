@@ -4,14 +4,14 @@ import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { Layout } from '../components/Layout';
 
-const Main: ParentComponent = () => {
+const Cards: ParentComponent = () => {
   return (
     <Layout>
       <Layout.Header>
         <Header />
       </Layout.Header>
       <Layout.Content>
-        <A href="/cards">cards</A>
+        <A href="/">home</A>
       </Layout.Content>
       <Layout.Footer>
         <Footer />
@@ -20,4 +20,4 @@ const Main: ParentComponent = () => {
   );
 };
 
-export default Main;
+export default Cards;
