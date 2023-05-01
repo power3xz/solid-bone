@@ -50,7 +50,7 @@ module.exports = {
         use: ['babel-loader', 'ts-loader'],
       },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [styleLoader, CSSModuleLoader, PostCSSLoader, 'sass-loader'],
       },
     ],
