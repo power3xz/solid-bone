@@ -1,4 +1,4 @@
 import { render } from 'solid-js/web';
-import App from './app';
+import App from './components/App';
 
-render(() => <App />, document.querySelector('#app') as HTMLElement);
+render(() => <App />, document.querySelector('#root') as HTMLElement);
