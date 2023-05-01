@@ -24,31 +24,30 @@ const classNames = {
   content: cx('content'),
   footer: cx('footer'),
 };
-const ModuleCssContext = createContext<ModuleCss>(classNames);
+const ClassNameContext = createContext<ModuleCss>(classNames);
 
 export const Layout: LayoutComponent = (props) => {
   return (
-    <ModuleCssContext.Provider value={classNames}>
+    <ClassNameContext.Provider value={classNames}>
       <div class={cx('layout')}>
         <div class={cx('header')} />
         <div class={cx('content')} />
         <div class={cx('footer')} />
       </div>
       {props.children}
-    </ModuleCssContext.Provider>
+    </ClassNameContext.Provider>
   );
 };
 
 const LayoutSlot: ParentComponent<{
   slotName: 'header' | 'content' | 'footer';
 }> = (props) => {
-  const classNames = useContext(ModuleCssContext);
+  const classNames = useContext(ClassNameContext);
   const [node, setNode] = createSignal<Element | undefined>();
+  const selector = `.${classNames[props.slotName]}`;
   onMount(() => {
-    const mount = document.querySelector(
-      `.${classNames[props.slotName]}`
-    ) as Element;
-    setNode(mount);
+    const element = document.querySelector(selector) as Element;
+    setNode(element);
   });
   return (
     <Show when={node()}>
