@@ -1,8 +1,17 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  font-style: normal;
+  /* font-display: swap; 렌더링한 폰트차이가 커서 일단 주석 처리 */
+  src: local('DungGeunMo'),
+    url('./fonts/DungGeunMo.woff2') format('woff2-variations');
+}
+
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.6rem;
+  font-family: 'DungGeunMo';
 }
 #root {
   padding: 8px;
