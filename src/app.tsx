@@ -1,4 +1,6 @@
-const App = () => {
+import { Component } from 'solid-js';
+
+const App: Component = () => {
   return <h1>hello!</h1>;
 };
 
