@@ -1,3 +1,5 @@
+import styles from './Content.module.scss';
+
 export const Content = () => {
-  return <div class="content">content</div>;
+  return <div class={styles.content}>content</div>;
 };
