@@ -6,9 +6,17 @@ import { Header } from './Header';
 export const App: Component = () => {
   return (
     <div class={style.app}>
-      <Header />
-      <Content />
-      <Footer />
+      <div class={style.header}>
+        <Header />
+      </div>
+
+      <div class={style.content}>
+        <Content />
+      </div>
+
+      <div class={style.footer}>
+        <Footer />
+      </div>
     </div>
   );
 };
