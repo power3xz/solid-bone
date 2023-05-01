@@ -4,21 +4,22 @@ import styles from './App.module.scss';
 import { Content } from './Content';
 import { Footer } from './Footer';
 import { Header } from './Header';
+import { Layout } from './Layout';
 
 export const App: Component = () => {
   return (
     <div class={styles.app}>
-      <div class={styles.header}>
-        <Header />
-      </div>
-
-      <div class={styles.content}>
-        <Content />
-      </div>
-
-      <div class={styles.footer}>
-        <Footer />
-      </div>
+      <Layout>
+        <Layout.Header>
+          <Header />
+        </Layout.Header>
+        <Layout.Content>
+          <Content />
+        </Layout.Content>
+        <Layout.Footer>
+          <Footer />
+        </Layout.Footer>
+      </Layout>
     </div>
   );
 };

@@ -1,17 +1,2 @@
 .app {
-  border: 2px solid #333333;
-  border-radius: 2px;
-  box-shadow: 2px 2px 1px #999999;
-  height: calc(100vh - 16px);
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-  .content {
-    flex: 1;
-  }
-  .header,
-  .footer {
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
 }
