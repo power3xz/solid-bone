@@ -1,9 +1,9 @@
 import { Component } from 'solid-js';
-import './App.scss';
+import style from './App.module.scss';
 const App: Component = () => {
   return (
-    <div class="app">
-      <h1 class="title">hello!</h1>
+    <div class={style.app}>
+      <h1 class={style.title}>hello!</h1>
     </div>
   );
 };
